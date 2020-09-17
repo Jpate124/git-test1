@@ -1,0 +1,196 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe4844ae9, pid=21412, tid=21416
+#
+# JRE version:  (11.0.5+10) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.5+10-LTS, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1e4ae9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-DEFAULT jdk.compiler/com.sun.tools.javac.launcher.Main test.java
+
+Host: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 18362 (10.0.18362.1082)
+Time: Mon Sep 14 13:48:32 2020 Eastern Daylight Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000024c0bf32000):  JavaThread "Unknown thread" [_thread_in_vm, id=21416, stack(0x0000009a40500000,0x0000009a40600000)]
+
+Stack: [0x0000009a40500000,0x0000009a40600000],  sp=0x0000009a405fedb0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1e4ae9]
+V  [jvm.dll+0x1e3023]
+V  [jvm.dll+0x3734db]
+V  [jvm.dll+0x733ae9]
+V  [jvm.dll+0x3e2e1d]
+V  [jvm.dll+0x3e51e1]
+C  [java.exe+0x3607]
+C  [java.exe+0x178dc]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000665b970a2fcc, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000006
+RSP=0x0000009a405fedb0, RBP=0x0000000000000000, RSI=0x0000024c0bf32000, RDI=0x0000000000000000
+R8 =0x0000000000000006, R9 =0x0000000000000006, R10=0x0000000000000006, R11=0x0000009a405fe620
+R12=0x0000000000000000, R13=0x00007fffe4c40c20, R14=0x0000024c0a5fe5b8, R15=0x0000009a405ff808
+RIP=0x00007fffe4844ae9, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x0000009a405fedb0)
+0x0000009a405fedb0:   0000024c0a609200 00007ff866957170
+0x0000009a405fedc0:   0000009a405ff808 0000024c0a5fe5b8
+0x0000009a405fedd0:   0000000000000000 0000000000000400
+0x0000009a405fede0:   0000c37ab4ae0a67 00007fffe4c40c20
+0x0000009a405fedf0:   0000000000000000 0000009a405ff808
+0x0000009a405fee00:   0000024c0a5fe5b8 00007fffe4c40c20
+0x0000009a405fee10:   0000000000000000 00007ff853820000
+0x0000009a405fee20:   00007fffe4ec1748 0000000000000000
+0x0000009a405fee30:   00007fffe4842ec7 00007ff86691aeac
+0x0000009a405fee40:   0000000000000000 00007fffe4cbe4ed
+0x0000009a405fee50:   0000665b970a2fcc 0000024c0a5fe5b8
+0x0000009a405fee60:   00007fff00000000 00007fffe4c40c20
+0x0000009a405fee70:   0000024c0bf32000 0000009a405fef90
+0x0000009a405fee80:   0000000000000000 00007fffe4843023
+0x0000009a405fee90:   00007ff853800000 00007ff85382d0cc
+0x0000009a405feea0:   0000009a405fef90 0000024c0bf32000 
+
+Instructions: (pc=0x00007fffe4844ae9)
+0x00007fffe4844ac9:   b8 00 00 00 48 8b 05 4c 22 84 00 48 33 c4 48 89
+0x00007fffe4844ad9:   84 24 a0 00 00 00 48 8b e9 48 83 cb ff 48 ff c3
+0x00007fffe4844ae9:   80 3c 0b 00 75 f7 33 f6 c6 44 24 30 01 40 38 35
+0x00007fffe4844af9:   fb 28 87 00 74 17 40 38 35 ba 8f 86 00 75 0e 33 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000024c0a5fe300, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe4d9888d]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe4dae217]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7ddcf0000 - 0x00007ff7ddd37000 	C:\Program Files\Java\jdk-11.0.5\bin\java.exe
+0x00007ff8698c0000 - 0x00007ff869ab0000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff868820000 - 0x00007ff8688d2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff866900000 - 0x00007ff866ba5000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff867ce0000 - 0x00007ff867d83000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff868a20000 - 0x00007ff868abe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff868000000 - 0x00007ff868097000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff867a70000 - 0x00007ff867b90000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff867e60000 - 0x00007ff867ff5000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8668d0000 - 0x00007ff8668f1000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff867970000 - 0x00007ff867996000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff866ee0000 - 0x00007ff867076000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff867820000 - 0x00007ff8678be000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff866c60000 - 0x00007ff866d5a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff865c70000 - 0x00007ff865ef4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1082_none_9e8193e1e45b25c1\COMCTL32.dll
+0x00007ff863bd0000 - 0x00007ff863bda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff868480000 - 0x00007ff8687b5000 	C:\WINDOWS\System32\combase.dll
+0x00007ff866850000 - 0x00007ff8668d0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff867b90000 - 0x00007ff867bbe000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007e1100000000 - 0x00007e1100076000 	C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\conemu-maximus5\ConEmu\ConEmuHk64.dll
+0x00007ff8545b0000 - 0x00007ff8545c6000 	C:\Program Files\Java\jdk-11.0.5\bin\vcruntime140.dll
+0x00007ff853850000 - 0x00007ff8538fa000 	C:\Program Files\Java\jdk-11.0.5\bin\msvcp140.dll
+0x00007fffe4660000 - 0x00007fffe5188000 	C:\Program Files\Java\jdk-11.0.5\bin\server\jvm.dll
+0x00007ff869100000 - 0x00007ff869108000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff863090000 - 0x00007ff8630b4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff850300000 - 0x00007ff850309000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x0000024c0be90000 - 0x0000024c0beff000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff863000000 - 0x00007ff86302d000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff8678c0000 - 0x00007ff86790a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff866790000 - 0x00007ff8667a1000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ff853e60000 - 0x00007ff853e71000 	C:\Program Files\Java\jdk-11.0.5\bin\verify.dll
+0x00007ff866290000 - 0x00007ff866484000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff865ff0000 - 0x00007ff86601a000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff853820000 - 0x00007ff853849000 	C:\Program Files\Java\jdk-11.0.5\bin\java.dll
+0x00007ff853800000 - 0x00007ff853816000 	C:\Program Files\Java\jdk-11.0.5\bin\zip.dll
+0x00007ff862ba0000 - 0x00007ff862baa000 	C:\Program Files\Java\jdk-11.0.5\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.5\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1082_none_9e8193e1e45b25c1;C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Java\jdk-11.0.5\bin\server
+
+VM Arguments:
+jvm_args: --add-modules=ALL-DEFAULT 
+java_command: jdk.compiler/com.sun.tools.javac.launcher.Main test.java
+java_class_path (initial): C:\LINGO64_18\Lingo18.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 265717312                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 4251476992                                {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+CLASSPATH=C:\LINGO64_18\Lingo18.jar
+PATH=C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\bin;C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\conemu-maximus5;C:\Users\jeetp\OneDrive\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\LINGO64_18\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk-11.0.5\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\jeetp\anaconda3;C:\Users\jeetp\anaconda3\Library\mingw-w64\bin;C:\Users\jeetp\anaconda3\Library\usr\bin;C:\Users\jeetp\anaconda3\Library\bin;C:\Users\jeetp\anaconda3\Scripts;C:\Users\jeetp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\jeetp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jeetp\AppData\Roaming\npm;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\jeetp\OneDrive\Desktop\cmder
+USERNAME=jeetp
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.1082)
+
+CPU:total 8 (initial active 8) 
+
+Memory: 4k page, system-wide physical 16218M (8828M free)
+TotalPageFile size 18650M (AvailPageFile size 10149M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 4M, peak: 4M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.5+10-LTS) for windows-amd64 JRE (11.0.5+10-LTS), built on Oct  6 2019 12:37:14 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
